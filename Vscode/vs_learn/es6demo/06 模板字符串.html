@@ -1,0 +1,29 @@
+<script>
+    //1 使用`符号实现换行
+    let str1 = `hello,
+        es6 demo up!`
+    console.log(str1)
+
+    //2 在`符号里面使用表达式获取变量值
+    let name = "Mike"
+    let age = 20
+
+    let str2 = `hello,${name},age is ${age+1}`
+    console.log(str2)
+
+    //3 在`符号调用方法
+    function f1() {
+        return "hello f1"
+    }
+
+    let str3 = `demo, ${f1()}`
+    console.log(str3)
+
+    // 拼接在${}之后
+    function f2() {
+        return "张玉你好呀"
+    }
+
+    let str4 = `demo1, ${f2()},明天是否依旧如此`
+    console.log(str4)
+</script>

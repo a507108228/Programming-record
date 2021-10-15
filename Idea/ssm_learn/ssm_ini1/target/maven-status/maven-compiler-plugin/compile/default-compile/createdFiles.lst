@@ -1,0 +1,9 @@
+com\lzw\bean\BooksExample$GeneratedCriteria.class
+com\lzw\bean\BooksExample.class
+com\lzw\service\BooksService.class
+com\lzw\bean\BooksExample$Criterion.class
+com\lzw\controller\BookController.class
+com\lzw\bean\Books.class
+com\lzw\bean\BooksExample$Criteria.class
+com\lzw\test\BookMapperTest.class
+com\lzw\mapper\BooksMapper.class

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.lzw.dao.UserMapper">
+    <select id="getUserList" resultType="com.lzw.pojo.User">
+        select *
+        from user
+    </select>
+
+    <select id="getUserByMap" resultType="com.lzw.pojo.User">
+        select *
+        from user
+        where id = #{id}
+          and name = #{name}
+          and pwd = #{pwd}
+    </select>
+
+    <!-- useGeneratedKeys="true" keyProperty="id"
+            设置自增 指定谁自增 可以获取自增的id值-->
+    <insert id="addUser" parameterType="com.lzw.dao.UserMapper"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into user(name, pwd)
+        values (#{name}, #{pwd})
+    </insert>
+
+    <update id="updateUser">
+        update user
+        set name = #{name},
+            pwd  = #{pwd}
+        where id = #{id}
+    </update>
+
+    <delete id="deleteUser">
+        delete
+        from user
+        where id = #{id}
+    </delete>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mybatis/6.13.iml" filepath="$PROJECT_DIR$/mybatis/6.13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis_01/mybatis_01.iml" filepath="$PROJECT_DIR$/mybatis/mybatis_01/mybatis_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis_02/mybatis_02.iml" filepath="$PROJECT_DIR$/mybatis/mybatis_02/mybatis_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis_03/mybatis_03.iml" filepath="$PROJECT_DIR$/mybatis/mybatis_03/mybatis_03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myspring/myspring.iml" filepath="$PROJECT_DIR$/myspring/myspring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc/sm_01/sm_01.iml" filepath="$PROJECT_DIR$/springmvc/sm_01/sm_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc/sm_02/sm_02.iml" filepath="$PROJECT_DIR$/springmvc/sm_02/sm_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc/sm_03/sm_03.iml" filepath="$PROJECT_DIR$/springmvc/sm_03/sm_03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc/springmvc.iml" filepath="$PROJECT_DIR$/springmvc/springmvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myspring/springtest01/springtest01.iml" filepath="$PROJECT_DIR$/myspring/springtest01/springtest01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myspring/springtest02/springtest02.iml" filepath="$PROJECT_DIR$/myspring/springtest02/springtest02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myspring/springtest03/springtest03.iml" filepath="$PROJECT_DIR$/myspring/springtest03/springtest03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myspring/springtest04/springtest04.iml" filepath="$PROJECT_DIR$/myspring/springtest04/springtest04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myspring/springtest05/springtest05.iml" filepath="$PROJECT_DIR$/myspring/springtest05/springtest05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_hrms/ssm_hrms.iml" filepath="$PROJECT_DIR$/ssm_hrms/ssm_hrms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm_init/ssm_init.iml" filepath="$PROJECT_DIR$/ssm_init/ssm_init.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ssm_learn.iml" filepath="$PROJECT_DIR$/.idea/ssm_learn.iml" />
+    </modules>
+  </component>
+</project>

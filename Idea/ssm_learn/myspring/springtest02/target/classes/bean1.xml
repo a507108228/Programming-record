@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 创建对象 -->
+    <bean id="student" class="com.lzw.spring.Student">
+        <!-- 集合属性值注入 -->
+
+        <property name="courses">
+            <!-- 数组值注入 -->
+            <array>
+                <value>java</value>
+                <value>c++</value>
+                <value>python</value>
+            </array>
+        </property>
+
+        <!-- list集合注入属性值 -->
+        <property name="list">
+            <list>
+                <value>小明</value>
+                <value>小张</value>
+                <value>小李</value>
+            </list>
+        </property>
+
+        <!-- 对象类型的List集合 -->
+        <property name="courseList">
+            <list>
+                <ref bean="course1"/>
+                <ref bean="course2"/>
+                <ref bean="course3"/>
+            </list>
+        </property>
+
+        <!-- map集合注入属性 -->
+        <property name="map">
+            <map>
+                <entry key="Java" value="java"/>
+                <entry key="C++" value="c++"/>
+            </map>
+        </property>
+
+        <!-- set集合属性注入-->
+        <property name="set">
+            <set>
+                <value>Mysql</value>
+                <value>Redis</value>
+            </set>
+        </property>
+
+    </bean>
+
+    <!-- 外联 给List 对象属性赋值 -->
+    <bean id="course1" class="com.lzw.spring.Course">
+        <property name="cname" value="Spring5"/>
+    </bean>
+    <bean id="course2" class="com.lzw.spring.Course">
+        <property name="cname" value="Spring MVC"/>
+    </bean>
+    <bean id="course3" class="com.lzw.spring.Course">
+        <property name="cname" value="Mybatis"/>
+    </bean>
+</beans>

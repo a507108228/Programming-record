@@ -1,0 +1,13 @@
+<script>
+     //1 对象复制
+     let person1 = {"name":"lucy","age":20}
+     let person2 = {...person1}
+     console.log("复制的对象："+person2)   //Uncaught SyntaxError: Unexpected token ...
+
+     //2 对象合并
+     let name = {name:'mary'}
+     let age = {age:30}
+     let p2 = {...name,...age}
+     console.log("合并后的对象："+p2)
+     console.log(p2.name+" "+p2.age)
+</script>

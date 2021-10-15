@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+
+<!-- 如果IndexController使用的是RestController注解 无法取到msg 所以我换成了Controller -->
+<div th:text="${msg}"></div>
+<div th:utext="${msg}"></div>
+<div th:text="我很自信"></div>
+<div th:title="测试2">无效</div>
+<!-- 遍历 -->
+<div th:each="user:${users}" th:text="${user}"></div>
+
+</body>
+</html>

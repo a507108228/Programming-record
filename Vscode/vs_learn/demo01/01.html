@@ -1,0 +1,33 @@
+<h1>hello vscode!</h1>
+
+<script>
+    {
+        var a = 10 // 没有局部概念
+        let b = 20
+        console.log("括号里的b = " + b)
+
+        let [x, y, z] = [10, 20, 30]
+        console.log(x, y, z)
+
+    }
+
+    let user = { "name": "lucy", "age": 20 }
+    let name1 = user.name
+    let age1 = user.age
+    console.log("name = " + name1 + "  " + "age = " + age1)
+    console.log(a)
+    console.log(b) // 没有输出出来
+
+</script>
+
+<script>
+    const PI = "3.1415"
+    PI = 3
+
+    let {name, age} = user
+    console.log(name, age)
+
+    let string1 = `hey,
+        can you stop angry now?`
+    console.log(string1)
+</script>
