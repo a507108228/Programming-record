@@ -4,6 +4,7 @@ package com.atguigu.eduservice.controller;
 import com.atguigu.commonutils.R;
 import com.atguigu.eduservice.entity.vo.CourseInfoVo;
 import com.atguigu.eduservice.service.EduCourseService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/eduservice/course")
 @CrossOrigin
-public class EduCourseController {
+public class EduCourseController{
 
     @Autowired
     private EduCourseService courseService;
@@ -26,10 +27,8 @@ public class EduCourseController {
     // 添加课程基本信息的方法
     @PostMapping("addCourseInfo")
     public R addCourseInfo(@RequestBody CourseInfoVo courseInfoVo){
-
-        courseService.saveCourseInfo(courseInfoVo);
-
-        return R.ok();
+        // 返回添加之后课程id，为了后面添加大纲使用
+        String id = courseService.saveCourseInfo(courseInfoVo);
+        return R.ok().data("courseId", id);
     }
 }
-

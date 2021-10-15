@@ -2,10 +2,12 @@ package com.atguigu.eduservice.entity;
 
 import java.math.BigDecimal;
 
-import com.baomidou.mybatisplus.annotation.*;
-
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -19,7 +21,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author testjava
- * @since 2021-10-14
+ * @since 2020-03-02
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -36,10 +38,10 @@ public class EduCourse implements Serializable {
     @ApiModelProperty(value = "课程讲师ID")
     private String teacherId;
 
-    @ApiModelProperty(value = "课程专业ID")
+    @ApiModelProperty(value = "二级分类ID")
     private String subjectId;
 
-    @ApiModelProperty(value = "课程专业父级ID")
+    @ApiModelProperty(value = "一级分类级ID")
     private String subjectParentId;
 
     @ApiModelProperty(value = "课程标题")
@@ -67,7 +69,6 @@ public class EduCourse implements Serializable {
     private String status;
 
     @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
-    @TableLogic  // 必须加入此注解否则无法使用逻辑删除
     private Integer isDeleted;
 
     @ApiModelProperty(value = "创建时间")
