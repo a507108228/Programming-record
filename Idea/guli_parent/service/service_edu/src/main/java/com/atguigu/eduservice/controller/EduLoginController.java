@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
  * @since 2021/9/25 16:18
  * description:
  */
-@Api("登录管理")
+@Api(description = "登录管理")
 @RestController
 @RequestMapping("/eduservice/user")
 @CrossOrigin  //解决跨域

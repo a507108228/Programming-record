@@ -2,6 +2,11 @@ package com.atguigu.eduservice.entity.vo;
 
 import lombok.Data;
 
+/**
+ * @author a5071
+ * @since 2021/10/17 20:18
+ * @description:
+ */
 @Data
 public class CoursePublishVo {
     private String id;

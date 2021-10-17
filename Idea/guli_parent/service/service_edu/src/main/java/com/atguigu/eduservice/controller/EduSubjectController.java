@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.management.Descriptor;
 import java.util.List;
 
 /**
@@ -24,7 +25,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/eduservice/subject")
 @CrossOrigin
-@Api("课程分类管理")
+@Api(description = "课程分类管理")
 public class EduSubjectController {
 
 
