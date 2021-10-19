@@ -76,8 +76,8 @@
     </el-form-item>
     <el-form-item label="是否免费">
       <el-radio-group v-model="video.free">
-        <el-radio :label="true">免费</el-radio>
-        <el-radio :label="false">默认</el-radio>
+        <el-radio :label="false">免费</el-radio>
+        <el-radio :label="true">默认</el-radio>
       </el-radio-group>
     </el-form-item>
 
@@ -120,9 +120,9 @@ export default {
     data() {
         return {
             saveBtnDisabled:false,
-            courseId:'',//课程id
+            courseId:'',// 课程id
             chapterVideoList:[],
-            chapter:{ //封装章节数据
+            chapter:{ // 封装章节数据
                 title: '',
                 sort: 0
             },
@@ -131,10 +131,10 @@ export default {
                 sort: 0,
                 free: 0,
                 videoSourceId: '',
-                videoOriginalName:''//视频名称
+                videoOriginalName:''// 视频名称
             },
-            dialogChapterFormVisible:false,//章节弹框
-            dialogVideoFormVisible:false, //小节弹框
+            dialogChapterFormVisible:false,// 章节弹框
+            dialogVideoFormVisible:false, // 小节弹框
 
 
             fileList: [],//上传文件列表
@@ -145,7 +145,7 @@ export default {
         // 获取路由的id值
         if(this.$route.params && this.$route.params.id) {
             this.courseId = this.$route.params.id
-            //根据课程id查询章节和小节
+            // 根据课程id查询章节和小节
             this.getChapterVideo()
         }
     },
@@ -189,6 +189,9 @@ export default {
             this.dialogVideoFormVisible = true
             // 设置章节id
             this.video.chapterId = chapterId
+            // 清空小节框
+            this.video.title = ''
+            this.video.sort = 0
         },
 
         // 添加小节
