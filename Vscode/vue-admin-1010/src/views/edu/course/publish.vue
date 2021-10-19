@@ -40,23 +40,24 @@ export default {
   },
 
   created() {
-    //获取路由课程id值
+    // 获取路由课程id值
     if(this.$route.params && this.$route.params.id) {
       this.courseId = this.$route.params.id
-      //调用接口方法根据课程id查询
+      // 调用接口方法根据课程id查询
       this.getCoursePublishId()
     }
   },
 
   methods: {
 
-    //根据课程id查询
+    // 根据课程id查询
     getCoursePublishId() {
       course.getPublihCourseInfo(this.courseId)
         .then(response => {
           this.coursePublish = response.data.publishCourse
         })
     },
+
     previous() {
       console.log('previous')
       this.$router.push({ path: '/course/chapter/1' })
@@ -65,12 +66,12 @@ export default {
     publish() {
       course.publihCourse(this.courseId)
         .then(response => {
-          //提示
+          // 提示
           this.$message({
               type: 'success',
               message: '课程发布成功!'
           });
-          //跳转课程列表页面
+          // 跳转课程列表页面
           this.$router.push({ path: '/course/list' })
         })
       

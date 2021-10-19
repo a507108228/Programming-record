@@ -42,11 +42,17 @@ public class EduChapterController {
         return R.ok();
     }
 
-    // 根据章节id查询
-    @GetMapping("getChapterInfo/{chapterId}")
-    public R getChapterInfo(@PathVariable String chapterId) {
-        EduChapter eduChapter = chapterService.getById(chapterId);
-        return R.ok().data("chapter",eduChapter);
+    // 删除的方法
+    @DeleteMapping("{chapterId}")
+    public R deleteChapter(@PathVariable String chapterId) {
+        // 根据chapterId 查询小节表 有数据不删除
+        boolean flag = chapterService.deleteChapter(chapterId);
+        if(flag) {
+            return R.ok();
+        } else {
+            return R.error();
+        }
+
     }
 
     // 修改章节
@@ -56,17 +62,13 @@ public class EduChapterController {
         return R.ok();
     }
 
-    // 删除的方法
-    @DeleteMapping("{chapterId}")
-    public R deleteChapter(@PathVariable String chapterId) {
-        boolean flag = chapterService.deleteChapter(chapterId);
-        if(flag) {
-            return R.ok();
-        } else {
-            return R.error();
-        }
-
+    // 根据章节id查询
+    @GetMapping("getChapterInfo/{chapterId}")
+    public R getChapterInfo(@PathVariable String chapterId) {
+        EduChapter eduChapter = chapterService.getById(chapterId);
+        return R.ok().data("chapter",eduChapter);
     }
+
 }
 
 
