@@ -83,6 +83,7 @@ public class EduChapterServiceImpl extends ServiceImpl<EduChapterMapper, EduChap
         return finalList;
     }
 
+
     // 删除章节的方法
     @Override
     public boolean deleteChapter(String chapterId) {
@@ -100,6 +101,7 @@ public class EduChapterServiceImpl extends ServiceImpl<EduChapterMapper, EduChap
             return result>0;
         }
     }
+
 
     //2 根据课程id删除章节
     @Override

@@ -18,6 +18,20 @@ export default {
           })
     },
 
+
+
     // 修改小节
-    
+    getVideoById(id){
+        return request({
+            url: '/eduservice/video/getVideoById/'+id,
+            method: 'get'
+        })
+    },
+    updateVideo(video){
+        return request({
+            url: '/eduservice/video/updateVideo',
+            method: 'post',
+            data: video
+        })
+    }
 }

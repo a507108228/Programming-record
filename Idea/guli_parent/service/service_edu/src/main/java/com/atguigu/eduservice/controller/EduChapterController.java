@@ -55,6 +55,13 @@ public class EduChapterController {
 
     }
 
+    // 根据章节id查询
+    @GetMapping("getChapterInfo/{chapterId}")
+    public R getChapterInfo(@PathVariable String chapterId) {
+        EduChapter eduChapter = chapterService.getById(chapterId);
+        return R.ok().data("chapter",eduChapter);
+    }
+
     // 修改章节
     @PostMapping("updateChapter")
     public R updateChapter(@RequestBody EduChapter eduChapter) {
@@ -62,12 +69,7 @@ public class EduChapterController {
         return R.ok();
     }
 
-    // 根据章节id查询
-    @GetMapping("getChapterInfo/{chapterId}")
-    public R getChapterInfo(@PathVariable String chapterId) {
-        EduChapter eduChapter = chapterService.getById(chapterId);
-        return R.ok().data("chapter",eduChapter);
-    }
+
 
 }
 

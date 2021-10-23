@@ -121,6 +121,7 @@ public class EduTeacherController{
     @ApiOperation(value = "条件分页")
     @PostMapping("pageTeacherCondition/{current}/{limit}")
     public R pageTeacherCondition(@PathVariable long current, @PathVariable long limit, @RequestBody(required = false) TeacherQuery teacherQuery){
+
         Page<EduTeacher> pageTeacher = new Page<>(current, limit);
         QueryWrapper<EduTeacher> wrapper = new QueryWrapper<>();
         String name = teacherQuery.getName();

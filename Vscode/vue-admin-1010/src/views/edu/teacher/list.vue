@@ -57,11 +57,14 @@
 
       <el-table-column label="操作" width="200" align="center">
         <template slot-scope="scope">
+
           <router-link :to="'/teacher/edit/'+scope.row.id">
             <el-button type="primary" size="mini" icon="el-icon-edit">修改</el-button>
           </router-link>
+
           <el-button type="danger" size="mini" icon="el-icon-delete" @click="removeDataById(scope.row.id)">删除
           </el-button>
+
         </template>
       </el-table-column>
     </el-table>
@@ -98,8 +101,8 @@
       getList(page = 1) {
         this.page = page
         teacher.getTeacherListPage(this.page, this.limit, this.teacherQuery)
-          .then(response => {//请求成功
-            //response接口返回的数据
+          .then(response => {// 请求成功
+            // response接口返回的数据
             console.log(response)
             this.list = response.data.rows
             this.total = response.data.total
@@ -109,19 +112,16 @@
           .catch(response => {
             console.error("讲师列表出错");
           })
-
       },
 
       // 清空方法
       resetData() {
-
         // 清空表单
         this.teacherQuery = {}
-
         // 查询所有数据
         this.getList()
-
       },
+
       removeDataById(id) {
         // debugger
         // console.log(memberId)
@@ -132,20 +132,17 @@
         }).then(() => {
           teacher.deleteTeacher(id)
             .then(response => {
-
               this.$message({
                 // 提示信息
                 type: 'success',
                 message: '删除成功!'
               })
-
               // 刷新页面
               this.getList()
             })
-
-
         })
       }
+
 
     },
   };

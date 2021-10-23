@@ -26,27 +26,27 @@ import org.springframework.stereotype.Service;
 @Service
 public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse> implements EduCourseService{
 
-    //课程描述注入
+    // 课程描述注入
     @Autowired
     private EduCourseDescriptionService courseDescriptionService;
 
-    //注入小节和章节service
+    // 注入小节和章节
     @Autowired
     private EduVideoService eduVideoService;
 
     @Autowired
     private EduChapterService chapterService;
 
-    //添加课程基本信息的方法
+    // 添加课程基本信息的方法
     @Override
     public String saveCourseInfo(CourseInfoVo courseInfoVo){
         //1 向课程表添加课程基本信息
-        //CourseInfoVo对象转换eduCourse对象
+        // CourseInfoVo对象转换eduCourse对象
         EduCourse eduCourse = new EduCourse();
         BeanUtils.copyProperties(courseInfoVo, eduCourse);
         int insert = baseMapper.insert(eduCourse);
         if (insert == 0) {
-            //添加失败
+            // 添加失败
             throw new GuliException(20001, "添加课程信息失败");
         }
 
@@ -57,14 +57,15 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         //edu_course_description
         EduCourseDescription courseDescription = new EduCourseDescription();
         courseDescription.setDescription(courseInfoVo.getDescription());
-        //设置描述id就是课程id
+        // 设置描述id就是课程id
         courseDescription.setId(cid);
         courseDescriptionService.save(courseDescription);
 
         return cid;
     }
 
-    //根据课程id查询课程基本信息
+
+    // 根据课程id查询课程基本信息
     @Override
     public CourseInfoVo getCourseInfo(String courseId){
         //1 查询课程表
@@ -79,7 +80,8 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         return courseInfoVo;
     }
 
-    //修改课程信息
+
+    // 修改课程信息
     @Override
     public void updateCourseInfo(CourseInfoVo courseInfoVo){
         //1 修改课程表
@@ -97,15 +99,17 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         courseDescriptionService.updateById(description);
     }
 
-    //根据课程id查询课程确认信息
+
+    // 根据课程id查询课程确认信息
     @Override
     public CoursePublishVo publishCourseInfo(String id){
-        //调用mapper
+        // 调用mapper
         CoursePublishVo publishCourseInfo = baseMapper.getPublishCourseInfo(id);
         return publishCourseInfo;
     }
 
-    //删除课程
+
+    // 删除课程
     @Override
     public void removeCourse(String courseId){
         //1 根据课程id删除小节

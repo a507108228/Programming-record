@@ -3,12 +3,18 @@ package com.atguigu.eduservice.controller;
 
 import com.atguigu.commonutils.R;
 import com.atguigu.eduservice.entity.EduCourse;
+import com.atguigu.eduservice.entity.EduTeacher;
 import com.atguigu.eduservice.entity.vo.CourseInfoVo;
 import com.atguigu.eduservice.entity.vo.CoursePublishVo;
+import com.atguigu.eduservice.entity.vo.CourseQuery;
+import com.atguigu.eduservice.entity.vo.TeacherQuery;
 import com.atguigu.eduservice.service.EduCourseService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,8 +36,43 @@ public class EduCourseController {
     @Autowired
     private EduCourseService courseService;
 
-    // 课程列表 基本实现
+
     // TODO  完善条件查询带分页
+    // 分页 条件查询
+    @ApiOperation(value = "条件分页")
+    @PostMapping("pageCourseCondition/{current}/{limit}")
+    public R pageCourseCondition(@PathVariable long current, @PathVariable long limit, @RequestBody(required = false) CourseQuery courseQuery){
+
+        Page<EduCourse> pageCourse = new Page<>(current, limit);
+        QueryWrapper<EduCourse> wrapper = new QueryWrapper<>();
+        String title = courseQuery.getTitle();
+        String status = courseQuery.getStatus();
+        String begin = courseQuery.getBegin();
+        String end = courseQuery.getEnd();
+
+        if (! StringUtils.isEmpty(title)) {
+            wrapper.like("title", title);
+        }
+        if (! StringUtils.isEmpty(status)) {
+            wrapper.eq("status", status);
+        }
+        if (! StringUtils.isEmpty(begin)) {
+            wrapper.ge("gmt_create", begin);
+        }
+        if (! StringUtils.isEmpty(end)) {
+            wrapper.le("gmt_modified", end);
+        }
+
+        // 排序
+        wrapper.orderByDesc("gmt_create");
+
+        courseService.page(pageCourse, wrapper);
+        long total = pageCourse.getTotal();
+        List<EduCourse> records = pageCourse.getRecords();
+        return R.ok().data("total", total).data("rows", records);
+    }
+
+    // 课程列表 基本实现
     @GetMapping
     public R getCourseList() {
         List<EduCourse> list = courseService.list(null);
@@ -60,6 +101,7 @@ public class EduCourseController {
         return R.ok();
     }
 
+
     // 根据课程id查询课程确认信息
     @GetMapping("getPublishCourseInfo/{id}")
     public R getPublishCourseInfo(@PathVariable String id) {
@@ -67,13 +109,13 @@ public class EduCourseController {
         return R.ok().data("publishCourse",coursePublishVo);
     }
 
-    // 课程最终发布
-    // 修改课程状态
+    // 课程最终发布 修改课程状态
     @PostMapping("publishCourse/{id}")
     public R publishCourse(@PathVariable String id) {
         EduCourse eduCourse = new EduCourse();
         eduCourse.setId(id);
-        eduCourse.setStatus("Normal");//设置课程发布状态
+        // 设置课程发布状态
+        eduCourse.setStatus("Normal");
         courseService.updateById(eduCourse);
         return R.ok();
     }
