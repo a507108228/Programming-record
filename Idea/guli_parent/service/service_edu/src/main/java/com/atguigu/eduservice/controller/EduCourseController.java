@@ -36,8 +36,6 @@ public class EduCourseController {
     @Autowired
     private EduCourseService courseService;
 
-
-    // TODO  完善条件查询带分页
     // 分页 条件查询
     @ApiOperation(value = "条件分页")
     @PostMapping("pageCourseCondition/{current}/{limit}")

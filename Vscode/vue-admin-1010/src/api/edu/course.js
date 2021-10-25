@@ -1,6 +1,6 @@
 import request from '@/utils/request'
 export default {
-    //1 添加课程信息
+    // 添加课程信息
     addCourseInfo(courseInfo) {
         return request({
             url: '/eduservice/course/addCourseInfo',
@@ -8,14 +8,13 @@ export default {
             data: courseInfo
         })
     },
-    //2 查询所有讲师
+    // 查询所有讲师
     getListTeacher() {
         return request({
             url: '/eduservice/teacher/findAll',
             method: 'get'
         })
     },
-
 
     // 根据课程id查询课程基本信息
     getCourseInfoId(id) {
@@ -33,7 +32,6 @@ export default {
         })
     },
 
-
     // 课程确认信息显示
     getPublihCourseInfo(id) {
         return request({
@@ -41,6 +39,7 @@ export default {
             method: 'get'
         })
     },
+
     // 课程最终发布
     publihCourse(id) {
         return request({
@@ -49,8 +48,6 @@ export default {
         })
     },
 
-
-    //TODO 课程列表
     // 课程列表     
     getListCourse() {
         return request({
@@ -58,6 +55,7 @@ export default {
             method: 'get'
         })
     },
+
     // 课程信息删除
     deleteCourse(courseId){
         return request({
@@ -68,10 +66,9 @@ export default {
 
     // --------------------------
 
-    //current当前页 limit每页记录数 teacherQuery条件对象
+    // current当前页 limit每页记录数 teacherQuery条件对象
     getCourseListPage(current, limit, courseQuery) {
         return request({
-            //url: '/eduservice/teacher/pageTeacherCondition/'+current+"/"+limit,
             url: `/eduservice/course/pageCourseCondition/${current}/${limit}`,
             method: 'post',
             //data表示把对象转换json进行传递到接口里面

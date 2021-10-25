@@ -18,8 +18,6 @@ export default {
           })
     },
 
-
-
     // 修改小节
     getVideoById(id){
         return request({
@@ -33,5 +31,14 @@ export default {
             method: 'post',
             data: video
         })
-    }
+    },
+
+    // 删除阿里云视频
+    deleteAliyunvod(id){
+        return request({
+            url: '/eduvod/video/removeAlyVideo/'+id,
+            method: 'delete'
+        })
+    },
+    
 }

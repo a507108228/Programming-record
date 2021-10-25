@@ -1,7 +1,7 @@
 import request from '@/utils/request'
 
 export default {
-  // 1 讲师列表（条件查询分页）
+  // 讲师列表（条件查询分页）
   //current当前页 limit每页记录数 teacherQuery条件对象
   getTeacherListPage(current, limit, teacherQuery) {
     return request({
@@ -14,7 +14,7 @@ export default {
     })
   },
 
-  // 2 删除讲师
+  // 删除讲师
   deleteTeacher(id) {
     return request({
       url: `/eduservice/teacher/${id}`,
@@ -22,7 +22,7 @@ export default {
     })
   },
 
-  // 3 添加讲师
+  // 添加讲师
   addTeacher(teacher) {
     return request({
       url: `/eduservice/teacher/addTeacher`,
@@ -31,7 +31,7 @@ export default {
     })
   },
 
-  // 4 根据id查询讲师
+  // 根据id查询讲师
   getTeacherInfo(id) {
     return request({
       url: `/eduservice/teacher/getTeacher/${id}`,
@@ -39,7 +39,7 @@ export default {
     })
   },
   
-  // 5 修改讲师
+  // 修改讲师
   updateTeacherInfo(teacher) {
     return request({
       url: `/eduservice/teacher/updateTeacher`,
