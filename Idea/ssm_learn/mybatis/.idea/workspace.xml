@@ -5,40 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbe7da0f-be9d-4b22-acb2-53e5d5d92872" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_01/src/main/java/com/lzw/dao/CourseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_01/src/main/java/com/lzw/pojo/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_01/src/main/resources/CourseMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_01/src/test/java/com/lzw/dao/CourseMapperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_02/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_02/src/main/java/com/lzw/dao/EduMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_02/src/main/java/com/lzw/pojo/Edu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_02/src/main/java/com/lzw/util/MybatisUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_02/src/main/resources/EduMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_02/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_02/src/test/java/com/lzw/dao/EduMprTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_03/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_03/src/main/java/com/lzw/dao/EduMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_03/src/main/java/com/lzw/pojo/Edu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_03/src/main/java/com/lzw/utils/MybatisUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_03/src/main/resources/EduMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_03/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mybatis_03/src/test/java/com/lzw/dao/EduMprTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcbe6e04-2769-4c2e-9bdb-b0c59013d46b.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis_01/src/main/java/com/lzw/dao/EduMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_01/src/main/java/com/lzw/dao/EduMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis_01/src/main/java/com/lzw/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_01/src/main/java/com/lzw/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis_01/src/main/java/com/lzw/util/MybatisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_01/src/main/java/com/lzw/util/MybatisUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis_01/src/main/resources/EduMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_01/src/main/resources/EduMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis_01/src/main/resources/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_01/src/main/resources/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis_01/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_01/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis_01/src/test/java/com/lzw/dao/EduMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_01/src/test/java/com/lzw/dao/EduMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis_01/src/test/java/com/lzw/dao/UserMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis_01/src/test/java/com/lzw/dao/UserMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../guli_parent/service/service_edu/src/main/java/com/atguigu/eduservice/client/impl/VodFileDegradeFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../guli_parent/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../guli_parent/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../guli_parent/service/service_edu/src/main/java/com/atguigu/eduservice/client/VodClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../guli_parent/service/service_edu/src/main/java/com/atguigu/eduservice/client/VodClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../guli_parent/service/service_edu/src/main/java/com/atguigu/eduservice/controller/EduVideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../guli_parent/service/service_edu/src/main/java/com/atguigu/eduservice/controller/EduVideoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../guli_parent/service/service_edu/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../guli_parent/service/service_edu/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../mp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../mp/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Vscode/vue-admin-1010/src/views/edu/course/chapter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Vscode/vue-admin-1010/src/views/edu/course/chapter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Vscode/vue-admin-1010/src/views/edu/course/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Vscode/vue-admin-1010/src/views/edu/course/list.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,25 +193,20 @@
       <recent name="com.lzw" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EduMprTest.test1">
-    <configuration name="EduMprTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis_03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.lzw.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.lzw.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.lzw.dao.EduMprTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager" selected="JUnit.EduMprTest.test4 (1)">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EduMprTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mybatis_03" />
+    <configuration name="EduMprTest.test1 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_02" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.lzw.dao.*" />
@@ -247,6 +216,22 @@
       <option name="PACKAGE_NAME" value="com.lzw.dao" />
       <option name="MAIN_CLASS_NAME" value="com.lzw.dao.EduMprTest" />
       <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EduMprTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lzw.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lzw.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.lzw.dao.EduMprTest" />
+      <option name="METHOD_NAME" value="test3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -301,19 +286,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.EduMprTest.test1 (1)" />
+      <item itemvalue="JUnit.EduMprTest.test3" />
       <item itemvalue="JUnit.EduMprTest.test4" />
-      <item itemvalue="JUnit.EduMprTest.test" />
       <item itemvalue="JUnit.EduMprTest.test5" />
       <item itemvalue="JUnit.EduMprTest.test4 (1)" />
-      <item itemvalue="JUnit.EduMprTest.test1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EduMprTest.test1" />
-        <item itemvalue="JUnit.EduMprTest.test5" />
         <item itemvalue="JUnit.EduMprTest.test4 (1)" />
-        <item itemvalue="JUnit.EduMprTest.test" />
+        <item itemvalue="JUnit.EduMprTest.test5" />
         <item itemvalue="JUnit.EduMprTest.test4" />
+        <item itemvalue="JUnit.EduMprTest.test3" />
+        <item itemvalue="JUnit.EduMprTest.test1 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -381,6 +366,7 @@
       <workItem from="1629702970473" duration="12000" />
       <workItem from="1629704919997" duration="34000" />
       <workItem from="1630400565613" duration="33000" />
+      <workItem from="1635323440690" duration="771000" />
     </task>
     <task id="LOCAL-00001" summary="更新idea至2021.1 &#10;2018版本最后一次提交">
       <created>1623733240614</created>

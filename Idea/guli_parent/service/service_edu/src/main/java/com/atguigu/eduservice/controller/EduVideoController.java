@@ -5,6 +5,7 @@ import com.atguigu.commonutils.R;
 import com.atguigu.eduservice.client.VodClient;
 import com.atguigu.eduservice.entity.EduVideo;
 import com.atguigu.eduservice.service.EduVideoService;
+import com.atguigu.servicebase.exceptionhandler.GuliException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +52,11 @@ public class EduVideoController{
         String videoSourceId = eduVideo.getVideoSourceId();
 
         if (! StringUtils.isEmpty(videoSourceId)){
-            vodClient.removeAlyVideo(videoSourceId);
+            R result = vodClient.removeAlyVideo(videoSourceId);
+
+            if (result.getCode() == 20001){
+                throw new GuliException(20001, "删除失败熔断器执行……");
+            }
         }
 
         // 删除小节

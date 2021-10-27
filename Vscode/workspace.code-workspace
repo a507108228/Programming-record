@@ -1,14 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "vs_learn"
-		},
-		{
-			"path": "vue-admin-1010"
+			"path": "."
 		}
 	],
 	"settings": {
-		"markdown.preview.fontSize": 16,
-		"liveServer.settings.multiRootWorkspaceName": "vs_learn"
+		"git.ignoreLimitWarning": true
 	}
 }

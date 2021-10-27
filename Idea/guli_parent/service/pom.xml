@@ -25,7 +25,7 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
-
+        <!-- 熔断器需要的依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>

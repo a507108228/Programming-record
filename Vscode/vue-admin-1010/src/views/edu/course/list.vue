@@ -66,7 +66,7 @@
             </el-col>
 
             <el-col :span="12">
-              <el-button type="danger" icon="el-icon-delete" size="mini" @click="removeByDataId(scope.row.id)">删除
+              <el-button type="danger" icon="el-icon-delete" size="mini" @click="removeDataById(scope.row.id)">删除
               </el-button>
             </el-col>
 

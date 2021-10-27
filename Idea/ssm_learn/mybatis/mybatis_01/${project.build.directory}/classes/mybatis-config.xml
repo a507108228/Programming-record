@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--XML 头部的声明，它用来验证 XML 文档的正确性-->
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--从 XML 中构建 SqlSessionFactory-->
+<configuration>
+
+    <!--&lt;!&ndash; typeAliases:起别名 &ndash;&gt;-->
+    <!--<typeAliases>-->
+    <!--&lt;!&ndash; 单个其别名 &ndash;&gt;-->
+    <!--<typeAlias type="com.lzw.pojo.Edu" alias="edu"></typeAlias>-->
+
+    <!--&lt;!&ndash; 批量起别名 &ndash;&gt;-->
+    <!--<package name="com.lzw.pojo"></package>-->
+    <!--</typeAliases>-->
+
+
+    <environments default="development">
+        <!--environment 元素体中包含了事务管理和连接池的配置-->
+        <environment id="development">
+            <!-- 事务管理 -->
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/mybatis?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="201314"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--mappers 元素则包含了一组映射器（mapper），-->
+    <!--这些映射器的 XML 映射文件包含了 SQL 代码和映射定义信息-->
+    <mappers>
+        <mapper resource="UserMapper.xml"/>
+        <mapper resource="EduMapper.xml"/>
+        <mapper resource="CourseMapper.xml"/>
+    </mappers>
+</configuration>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lzw.dao.CourseMapper">
+    <select id="getCourseByNameLike"
+            resultType="com.lzw.pojo.Course">
+        select *
+        from course where name like #{name} ;
+    </select>
+
+<!-- 此处为resultType=map -->
+    <select id="getCourseByIdReturnMap" resultType="map">
+       select *from course where id = #{id}
+    </select>
+
+<!-- 此处为Course -->
+    <select id="getCourseByNameLikeReturnMap" resultType="com.lzw.pojo.Course">
+        select *from course where name like #{name}
+    </select>
+
+<!-- resultMap：自定义结果集映射 -->
+    
+
+</mapper>

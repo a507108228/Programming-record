@@ -220,11 +220,11 @@ export default {
         openVideo(chapterId) {
             // 弹框
             this.dialogVideoFormVisible = true
+            // 清空小节框
+            this.video = {}
+            this.fileList = []
             // 设置章节id
             this.video.chapterId = chapterId
-            // 清空小节框
-            this.video.title = ''
-            this.video.sort = 0
         },
 
         // 添加小节
@@ -233,6 +233,7 @@ export default {
             this.video.courseId = this.courseId
             video.addVideo(this.video)
                 .then(response => {
+                    
                     // 关闭弹框
                     this.dialogVideoFormVisible = false
                     // 提示

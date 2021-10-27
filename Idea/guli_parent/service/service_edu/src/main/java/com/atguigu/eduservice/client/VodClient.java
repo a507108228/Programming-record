@@ -1,6 +1,7 @@
 package com.atguigu.eduservice.client;
 
 import com.atguigu.commonutils.R;
+import com.atguigu.eduservice.client.impl.VodFileDegradeFeignClient;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
@@ -15,7 +16,7 @@ import java.util.List;
  * @since 2021/10/25 20:08
  * description:
  */
-@FeignClient("service-vod")
+@FeignClient(name = "service-vod", fallback = VodFileDegradeFeignClient.class)// 10/26配置熔断器加上fallback
 @Component
 public interface VodClient{
 
