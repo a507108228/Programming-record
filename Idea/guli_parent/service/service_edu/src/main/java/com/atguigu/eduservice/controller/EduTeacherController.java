@@ -100,11 +100,11 @@ public class EduTeacherController{
     ){
         Page<EduTeacher> pageParm = new Page<>(current, limit);
 
-        try {
-            int i = 10/0;
-        } catch (Exception e) {
-            throw new GuliException(20001, "执行自定义异常");
-        }
+        // try {
+        //     int i = 10/0;
+        // } catch (Exception e) {
+        //     throw new GuliException(20001, "执行自定义异常");
+        // }
 
         teacherService.page(pageParm, null);
         // 数据list集合

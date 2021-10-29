@@ -1,8 +1,8 @@
 {
-  "name": "name",
+  "name": "lzw",
   "version": "1.0.0",
-  "description": "description",
-  "author": "author",
+  "description": "time files",
+  "author": "atguigu",
   "private": true,
   "scripts": {
     "dev": "nuxt",
