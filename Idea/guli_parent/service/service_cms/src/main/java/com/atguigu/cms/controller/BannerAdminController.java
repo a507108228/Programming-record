@@ -40,9 +40,7 @@ public class BannerAdminController{
         bannerService.page(bannerPage, null);
 
         List<CrmBanner> records = bannerPage.getRecords();
-        System.out.println("records==================>"+records);
         long total = bannerPage.getTotal();
-        System.out.println("total===================>"+total);
 
         return R.ok().data("total", total).data("rows", records);
     }

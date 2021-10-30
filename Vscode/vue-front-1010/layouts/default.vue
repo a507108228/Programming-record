@@ -4,13 +4,11 @@
     <header id="header">
       <section class="container">
         <h1 id="logo">
-          <a href="#" title="谷粒学院">
-            <img src="~/assets/img/logo.png" width="100%" alt="谷粒学院">
+          <a href="#" title="谷粒多学院">
+            <img src="~/assets/img/logo.png" width="100%" alt="谷粒多学院">
           </a>
         </h1>
-
         <div class="h-r-nsl">
-          <!-- 1027 此处配置跳转路由 -->
           <ul class="nav">
             <router-link to="/" tag="li" active-class="current" exact>
               <a>首页</a>
@@ -28,7 +26,6 @@
               <a>问答</a>
             </router-link>
           </ul>
-
           <!-- / nav -->
           <ul class="h-r-login">
             <li id="no-login">
@@ -109,7 +106,7 @@
                 <span>Email：info@atguigu.com</span>
               </section>
               <section class="b-f-link mt10">
-                <span>©2018课程版权均归谷粒学院所有 京ICP备17055252号</span>
+                <span>©2018课程版权均归谷粒多学院所有 京ICP备17055252号</span>
               </section>
             </section>
           </section>

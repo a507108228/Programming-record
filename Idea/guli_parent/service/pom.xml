@@ -19,7 +19,7 @@
     </modules>
 
     <dependencies>
-
+        <!-- 必须引入 -->
         <dependency>
             <groupId>com.atguigu</groupId>
             <artifactId>service_base</artifactId>
