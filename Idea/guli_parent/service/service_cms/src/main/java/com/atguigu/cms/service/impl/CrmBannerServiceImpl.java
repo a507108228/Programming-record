@@ -22,7 +22,7 @@ import java.util.List;
 @Service
 public class CrmBannerServiceImpl extends ServiceImpl<CrmBannerMapper, CrmBanner> implements CrmBannerService {
 
-    @Cacheable(value = "banner", key = "'selectAllBanner'")
+    @Cacheable(value = "banner", key = "'selectIndexList'")
     @Override
     public List<CrmBanner> selectIndexList(){
         // 根据id降序排列，显示前两条记录

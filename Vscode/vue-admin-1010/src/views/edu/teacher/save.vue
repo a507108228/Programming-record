@@ -107,7 +107,7 @@
         this.imagecropperShow = false
         this.imagecropperKey = this.imagecropperKey+1
         // 上传之后接口返回图片地址
-        this.teacher.avatar = data.url
+        this.teacher.avatar =data.url
       },
 
       init() {
