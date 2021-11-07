@@ -124,30 +124,30 @@ export default {
     return {
 
       swiperOption: {
-        //配置分页
+        // 配置分页
         pagination: {
           el: '.swiper-pagination'//分页的dom节点
         },
-        //配置导航
+        // 配置导航
         navigation: {
           nextEl: '.swiper-button-next',//下一页dom节点
           prevEl: '.swiper-button-prev'//前一页dom节点
         }
       },
-      //banner数组
+      // banner数组
       bannerList:[],
       eduList:[],
       teacherList:[]
     }
   },
   created() {
-    //调用查询banner的方法
+    // 调用查询banner的方法
     this.getBannerList()
-    //调用查询热门课程和名师的方法
+    // 调用查询热门课程和名师的方法
     this.getHotCourseTeacher()
   },
   methods:{
-    //查询热门课程和名师
+    // 查询热门课程和名师
     getHotCourseTeacher() {
       index.getIndexData()
         .then(response => {
@@ -155,7 +155,7 @@ export default {
           this.teacherList = response.data.data.teacherList
         })
     },
-    //查询banner数据
+    // 查询banner数据
     getBannerList() {
       banner.getListBanner()
         .then(response => {

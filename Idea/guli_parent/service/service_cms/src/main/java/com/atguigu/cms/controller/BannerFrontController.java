@@ -39,6 +39,7 @@ public class BannerFrontController{
     @GetMapping("getAllBanner")
     public R index() {
         List<CrmBanner> list = bannerService.selectIndexList();
+        System.out.println("数据库中查询的banner");
         return R.ok().data("list", list);
     }
 }
