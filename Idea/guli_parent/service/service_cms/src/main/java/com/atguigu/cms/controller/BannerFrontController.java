@@ -38,8 +38,8 @@ public class BannerFrontController{
     @ApiOperation(value = "查询两条banner")
     @GetMapping("getAllBanner")
     public R index() {
-        List<CrmBanner> list = bannerService.selectIndexList();
         System.out.println("数据库中查询的banner");
+        List<CrmBanner> list = bannerService.selectIndexList();
         return R.ok().data("list", list);
     }
 }

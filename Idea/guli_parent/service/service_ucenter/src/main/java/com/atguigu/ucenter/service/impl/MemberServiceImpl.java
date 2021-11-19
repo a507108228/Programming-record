@@ -1,7 +1,7 @@
 package com.atguigu.ucenter.service.impl;
 
 import com.atguigu.commonutils.JwtUtils;
-import com.atguigu.commonutils.MD5;
+import com.atguigu.ucenter.utils.MD5;
 import com.atguigu.servicebase.exceptionhandler.GuliException;
 import com.atguigu.ucenter.entity.Member;
 import com.atguigu.ucenter.entity.vo.RegisterVo;
@@ -13,8 +13,6 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-
-import javax.swing.*;
 
 /**
  * <p>

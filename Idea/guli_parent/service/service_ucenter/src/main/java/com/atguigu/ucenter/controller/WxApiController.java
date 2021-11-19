@@ -1,7 +1,7 @@
 package com.atguigu.ucenter.controller;
 
-import com.atguigu.commonutils.ConstantWxUtils;
-import com.atguigu.commonutils.HttpClientUtils;
+import com.atguigu.ucenter.utils.ConstantWxUtils;
+import com.atguigu.ucenter.utils.HttpClientUtils;
 import com.atguigu.commonutils.JwtUtils;
 import com.atguigu.servicebase.exceptionhandler.GuliException;
 import com.atguigu.ucenter.entity.Member;

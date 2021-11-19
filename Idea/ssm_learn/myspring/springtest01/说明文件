@@ -1,7 +1,0 @@
-xml创建对象
-无参|有参注入属性
-p.name 名称空间
-内部bean
-外部bean
-外联ref
-特殊值和null值

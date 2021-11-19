@@ -1,7 +1,6 @@
 package com.lzw.linked_list;
 
 
-import jdk.nashorn.internal.objects.NativeError;
 
 import java.util.Stack;
 
