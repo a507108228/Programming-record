@@ -38,7 +38,7 @@ public class BannerFrontController{
     @ApiOperation(value = "查询两条banner")
     @GetMapping("getAllBanner")
     public R index() {
-        System.out.println("数据库中查询的banner");
+        System.out.println("看有没有操作数据库的语句?MySQL:Redis");
         List<CrmBanner> list = bannerService.selectIndexList();
         return R.ok().data("list", list);
     }

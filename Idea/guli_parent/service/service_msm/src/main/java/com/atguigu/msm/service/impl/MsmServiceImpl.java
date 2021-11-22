@@ -33,14 +33,14 @@ public class MsmServiceImpl implements MsmService{
         //request.setProtocol(ProtocolType.HTTPS);
         request.setMethod(MethodType.POST);
         request.setDomain("dysmsapi.aliyuncs.com");
-        request.setVersion("2021-10-31");
+        request.setVersion("2017-05-25");
         request.setAction("SendSms");
 
         // 发送相关的参数 TODO 签名名称，模板code
         request.putQueryParameter("PhoneNumbers", phone);
         // 签名名称需要修改
-        request.putQueryParameter("SignName", "签名名称");
-        request.putQueryParameter("TemplateCode", "模板code");
+        request.putQueryParameter("SignName", "lzw的个人小站");
+        request.putQueryParameter("TemplateCode", "SMS_228117279");
         request.putQueryParameter("TemplateParam", JSONObject.toJSONString(param));
 
 

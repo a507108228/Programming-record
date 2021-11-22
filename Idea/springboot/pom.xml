@@ -6,6 +6,8 @@
 
     <modules>
         <module>demo_01</module>
+        <module>demo_02</module>
+        <module>demo_03</module>
     </modules>
 
     <parent>
@@ -48,7 +50,20 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- yaml 语法提示 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
 
+        <!-- 引入thymeleaf 自动配置值在ThymeleafProperties -->
+        <!-- 配置模板引擎SpringTemplateEngine -->
+        <!-- 配置ThymeleafViewResolve 视图解析 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
 
     </dependencies>
 
@@ -57,6 +72,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-configuration-processor</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+
             </plugin>
         </plugins>
     </build>

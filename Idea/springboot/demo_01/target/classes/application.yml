@@ -1,0 +1,45 @@
+person:
+  userName: "fsfas \n 李四"
+  boss: false
+  birth: 2021/11/19
+  age: 22
+  interests:
+    - a
+    - b
+    - c
+
+  animal: [ 貓，狗 ]
+
+  score: { english: 80, math: 90 }
+
+  salary:
+    - 99999
+    - 88888
+
+  pet:
+    name: 貓
+    weight: 999.999
+
+  allPets:
+    sick:
+      - { name: 貓, weight: 888 }
+      - name: 第二种寫法
+        weight: 3333
+      - name: 狗
+        weight: 8888
+
+    health:
+      - {name: ss, weight: 55}
+      - {name: s.s, weight: 5.5}
+
+# 静态资源路径
+#spring:
+#  mvc:
+#    static-path-pattern: /res/**
+
+# 开启delete put restful风格
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true

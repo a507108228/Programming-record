@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 style="text-align: center">欢迎</h1>
+
+1、测试rest风格：<br>
+<form action="/rest/user" method="get">
+    <input type="submit" value="Rest_Get提交">
+</form>
+<br>
+<form action="/rest/user" method="post">
+    <input type="submit" value="Rest_Post提交">
+</form>
+<br>
+<form action="/rest/user" method="post">
+    <input type="hidden" name="_method" value="Delete">
+    <input type="submit" value="Rest_Delete提交">
+</form>
+<br>
+<form action="/rest/user" method="post">
+    <input type="hidden" name="_method" value="Put">
+    <input type="submit" value="Rest_Put提交">
+</form>
+<br>
+
+2、测试基本注解
+<ul>
+    <li>@PathVariable(路径变量)</li>
+    <li>@RequestHeader(获取请求头)</li>
+    <li>@RequestParam(获取请求参数)</li>
+    <li>@CookieValue(获取cookie值)</li>
+    <li>@RequestAttribute(获取request域属性)</li>
+    <li>@RequestBody(获取请求体)</li>
+    <li>@MatrixVariable(矩阵变量)</li>
+</ul>
+<br>
+
+<a href="/ba/car/18/name?age=24&inters=basketBall&inters=games">@PathVariable(路径变量)---@RequestHeader(获取请求头)
+    ---@RequestParam(获取请求参数)---@CookieValue(获取cookie值)</a>
+<p></p>
+
+<form action="/ba/save" method="post">
+    <input type="text" name="name">
+    <p></p>
+    <input type="text" name="age">
+    <p></p>
+    <input type="submit" value="@RequestBody(获取请求体)"><br>
+</form>
+
+<a href="/ba/goto">RequestAttribute(获取request域属性)</a>
+</body>
+</html>
