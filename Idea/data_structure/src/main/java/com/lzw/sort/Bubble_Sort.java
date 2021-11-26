@@ -8,8 +8,8 @@ import java.util.Arrays;
  * @author a5071
  * @since 2021/11/23 16:33
  * description 冒泡排序 稳定排序法
- * 时间复杂度O(n)的平方 最好的情况 O(n)
- * 空间复杂度 O(1)
+ * 时间复杂度：O(n)的平方 最好的情况 O(n)
+ * 空间复杂度：O(1)
  */
 public class Bubble_Sort{
 

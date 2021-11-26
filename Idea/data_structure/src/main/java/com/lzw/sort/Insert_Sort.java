@@ -28,6 +28,7 @@ public class Insert_Sort{
 
 
         System.out.println("排序开始后：");
+        // i从1开始
         for (i = 1; i < data.length; i++) {
             temp = data[i];
             // j要从零开始
@@ -49,111 +50,4 @@ public class Insert_Sort{
         System.out.println("排序用时：" + (end - start));
     }
 
-    /**
-     * @author a5071
-     * @description 冒泡排序
-     */
-    @Test
-    public void testBs(){
-        long start = System.currentTimeMillis();
-        System.out.println("排序开始前：");
-        int data[] = {2, 6, 4, 3, 8, 1, 9, 5, 7};
-        int i, j, temp;
-        System.out.println(Arrays.toString(data));
-        System.out.println("\n");
-
-
-        System.out.println("排序开始后：");
-        for (i = 0; i < data.length - 1; i++) {
-            int flag = 0;
-            for (j = 0; j < data.length - 1 - i; j++) {
-                if (data[j] > data[j + 1]) {
-                    temp = data[j];
-                    data[j] = data[j + 1];
-                    data[j + 1] = temp;
-                    flag++;
-                }
-            }
-            if (flag == 0) {
-                break;
-            }
-
-            for (int k = 0; k < data.length; k++) {
-                System.out.print(data[k] + " ");
-            }
-            System.out.println("\n");
-        }
-
-
-        System.out.println("\n");
-        long end = System.currentTimeMillis();
-        System.out.println("排序用时：" + (end - start));
-    }
-
-    /**
-     * @author a5071
-     * @description 选择排序
-     */
-    @Test
-    public void testSe(){
-        long start = System.currentTimeMillis();
-        System.out.println("排序开始前：");
-        int data[] = {2, 6, 4, 3, 8, 1, 9, 5, 7};
-        int i, j, temp;
-        System.out.println(Arrays.toString(data));
-        System.out.println("\n");
-
-        System.out.println("排序开始后：");
-
-        for (i = 0; i < data.length - 1 ; i++) {
-            for (j = i + 1; j < data.length ; j++) {
-                if (data[i] > data[j]){
-                    temp = data[i];
-                    data[i] = data[j];
-                    data[j] = temp;
-                }
-            }
-            for (j = 0; j < data.length ; j++) {
-                System.out.print(data[j] + " ");
-            }
-            System.out.println(" ");
-        }
-
-        System.out.println("\n");
-        long end = System.currentTimeMillis();
-        System.out.println("排序用时：" + (end - start));
-    }
-
-    /**
-     * @author a5071
-     * @description 排序
-     */
-    @Test
-    public void testIn(){
-        long start = System.currentTimeMillis();
-        System.out.println("排序开始前：");
-        int data[] = {2, 6, 4, 3, 8, 1, 9, 5, 7};
-        int i, j, temp;
-        System.out.println(Arrays.toString(data));
-        System.out.println("\n");
-
-        System.out.println("排序开始后：");
-        for (i = 1; i < data.length ; i++) {
-            temp = data[i];
-            j = i - 1;
-            while (j>=0 && temp<data[j]){
-                data[j+1] = data[j];
-                j--;
-            }
-            data[j+1] = temp;
-
-            System.out.println(Arrays.toString(data));
-        }
-
-
-
-        System.out.println("\n");
-        long end = System.currentTimeMillis();
-        System.out.println("排序用时：" + (end - start));
-    }
 }
