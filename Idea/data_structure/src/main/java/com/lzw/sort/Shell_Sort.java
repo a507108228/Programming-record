@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import com.lzw.utils.FibonacciUtil;
 
 /**
  * @author a5071
@@ -70,7 +71,7 @@ public class Shell_Sort{
      * @description 插入排序
      */
     @Test
-    public void test(){
+    public void testInsert(){
         SimpleDateFormat format1 = new SimpleDateFormat("yyyy:MM:dd:HH:mm:ss");
         System.out.println("开始时间：" + format1.format(new Date()));
         long start = System.currentTimeMillis();
@@ -101,4 +102,5 @@ public class Shell_Sort{
         System.out.println("");
         System.out.println("花费时间为：" + (end - start) + " ms");
     }
+
 }

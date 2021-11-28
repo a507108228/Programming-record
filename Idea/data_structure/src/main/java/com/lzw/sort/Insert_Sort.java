@@ -2,7 +2,9 @@ package com.lzw.sort;
 
 import org.junit.Test;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * @author a5071
@@ -18,7 +20,7 @@ public class Insert_Sort{
      * @description 插入排序
      */
     @Test
-    public void test(){
+    public void testInsert(){
         long start = System.currentTimeMillis();
         System.out.println("排序开始前：");
         int data[] = {2, 6, 4, 3, 8, 1, 9, 5, 7};
@@ -48,6 +50,52 @@ public class Insert_Sort{
         System.out.println("\n");
         long end = System.currentTimeMillis();
         System.out.println("排序用时：" + (end - start));
+    }
+
+
+    /**
+     * @author a5071
+     * description 折半插入排序
+     */
+    @Test
+    public void testBinaryInsert(){
+        SimpleDateFormat format1 = new SimpleDateFormat("yyyy:MM:dd:HH:mm:ss---SSSS");
+        System.out.println("开始时间：" + format1.format(new Date()));
+        long start = System.currentTimeMillis();
+        int[] data = new int[5];
+        for (int i = 0; i < data.length; i++) {
+            data[i] = (int) (Math.random() * 40000);
+        }
+        System.out.println("排序前：" + Arrays.toString(data));
+        System.out.println(" ");
+
+        for (int i = 1; i < data.length; i++) {
+            int temp = data[i];
+            int low = 0;
+            int high = i - 1;
+            while (low <= high){
+                int mid = (low + high) / 2;
+                if ( data[mid] < temp){
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+            for (int j = i; j > low; j--) {
+                data[j] = data[j - 1];
+            }
+            data[low] = temp;
+            System.out.println(Arrays.toString(data));
+        }
+
+
+        System.out.println(" ");
+        System.out.println("排序后：" + Arrays.toString(data));
+        SimpleDateFormat format2 = new SimpleDateFormat("yyyy:MM:dd:HH:mm:ss---SSSS");
+        System.out.println("结束时间：" + format2.format(new Date()));
+        long end = System.currentTimeMillis();
+        System.out.println("");
+        System.out.println("花费时间为：" + (end - start) + " ms");
     }
 
 }

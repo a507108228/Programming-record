@@ -13,21 +13,19 @@ import java.util.Date;
  * 最小堆积树：节点元素总是比子元素小
  */
 public class Heap_Sort{
-    
+
     public static void main(String[] args){
         long start = System.currentTimeMillis();
         SimpleDateFormat time01 = new SimpleDateFormat("yyyy:MM:dd--HH:mm:ss:SSSS");
         System.out.println("开始时间：" + time01.format(new Date()));
 
-        int[] data = new int[10];
+        int[] data = new int[5];
         for (int i = 0; i < data.length; i++) {
             data[i] = (int) (Math.random() * 80000);
         }
         System.out.println("堆排序前" + Arrays.toString(data));
 
-
         heapSort(data);
-
 
         System.out.println("堆排序后" + Arrays.toString(data));
         System.out.println(" ");
@@ -84,5 +82,8 @@ public class Heap_Sort{
 
         }
     }
+
+
+
 
 }

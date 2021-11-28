@@ -15,7 +15,6 @@ public class Demo_01{
         System.out.println("请输入1--3之间任一数字：");
         Scanner scan = new Scanner(System.in);
 
-
         while (!scan.hasNext("0")) {
             int i = scan.nextInt();
             switch (i) {
