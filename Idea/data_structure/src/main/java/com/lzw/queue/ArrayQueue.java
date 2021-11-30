@@ -24,7 +24,7 @@ public class ArrayQueue{
             System.out.println("----------------");
             System.out.println("----------------");
 
-            key = scanner.next().charAt(0); // 接受一个字符
+            key = scanner.next().charAt(0); // 接收一个字符
             switch (key){
                 case 's':
                     arrayQueueDemo.showQueue();

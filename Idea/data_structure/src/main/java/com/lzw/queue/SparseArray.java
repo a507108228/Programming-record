@@ -58,9 +58,7 @@ public class SparseArray{
             }
         }
 
-        // 10-14 shabi
         // 输出稀疏数组的形式
-
         System.out.println();
         System.out.println("稀疏数组为---");
 
