@@ -214,8 +214,7 @@ public class Mpdemo1010ApplicationTests{
 
         List<User> users = userMapper.selectList(queryWrapper);
 
-        for (User ab :
-                users) {
+        for (User ab : users) {
             System.out.println(ab);
         }
 

@@ -30,6 +30,7 @@ public class HelloController{
     @GetMapping("/person")
     public Person person(){
 
+        System.out.println("双引号能识别转义字符"+person.getUserName());
         return person;
     }
 

@@ -1,5 +1,6 @@
 package com.lzw;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,6 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @since 2021/11/19 15:10
  * description 主程序类
  */
+@MapperScan(basePackages = "com.lzw.mapper")
 @SpringBootApplication
 public class Demo01Application{
 

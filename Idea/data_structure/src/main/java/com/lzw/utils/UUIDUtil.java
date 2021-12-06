@@ -58,6 +58,10 @@ public class UUIDUtil{
         return str.toString();
     }
 
+    /**
+     * @author a5071
+     * description 随机生成
+     */
     @Test
     public void test(){
         System.out.println(getRandomString2(5));

@@ -144,6 +144,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
 
         Page<EduCourse> pageCourse = new Page<>(current, limit);
         QueryWrapper<EduCourse> wrapper = new QueryWrapper<>();
+
         String title = courseQuery.getTitle();
         String status = courseQuery.getStatus();
         String begin = courseQuery.getBegin();

@@ -1,25 +1,32 @@
 person:
-  userName: "fsfas \n 李四"
+  userName: " fsfas \n 李四 " # 识别转义字符 单引号不识别
   boss: false
   birth: 2021/11/19
   age: 22
+
+  # 对象
+  pet:
+    name: 貓
+    weight: 999.999
+
+  # 数组
   interests:
     - a
     - b
     - c
 
+  # List<String>
   animal: [ 貓，狗 ]
 
+  # Map<String, Object> score;
   score: { english: 80, math: 90 }
 
+  # Set<Double>
   salary:
     - 99999
     - 88888
 
-  pet:
-    name: 貓
-    weight: 999.999
-
+  # Map<String, List<Pet>>
   allPets:
     sick:
       - { name: 貓, weight: 888 }
@@ -27,10 +34,9 @@ person:
         weight: 3333
       - name: 狗
         weight: 8888
-
     health:
-      - {name: ss, weight: 55}
-      - {name: s.s, weight: 5.5}
+      - { name: ss, weight: 55 }
+      - { name: s.s, weight: 5.5 }
 
 # 静态资源路径
 #spring:
@@ -43,3 +49,64 @@ spring:
     hiddenmethod:
       filter:
         enabled: true
+
+
+# 命令行模式下
+# java -jar xx.jar --spring.profiles.active = dev
+---
+# 配置文件指定那一种环境
+spring:
+  profiles:
+    active: dev
+
+---
+# 开发环境
+server:
+  port: 8001
+spring:
+  profiles: dev
+---
+---
+# 生产环境
+server:
+  port: 8002
+spring:
+  profiles: pro
+---
+---
+# 测试环境
+server:
+  port: 8003
+spring:
+  profiles: test
+---
+
+# 配置redis
+spring:
+  redis:
+    host: 121.41.40.20
+    port: 6380
+    password: Pwds.1308tgb
+    database: 0
+    timeout: 1800000
+
+  # 配置数据库
+
+  datasource:
+    druid:
+      url: jdbc:mysql://lzw-5071.mysql.rds.aliyuncs.com:3306/revisecode?useSSL=false&serverTimezone=UTC
+      username: lzw
+      password: Pwds1308tgb
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      stat-view-servlet:
+        allow: true
+
+# Mybatis
+mybatis:
+  type-aliases-package: com.lzw.bean
+  mapper-locations: classpath:com/lzw/mapper/*.xml
+

@@ -5,9 +5,12 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>demo</module>
         <module>demo_01</module>
         <module>demo_02</module>
         <module>demo_03</module>
+        <module>demo_04</module>
+        <module>demo_05</module>
     </modules>
 
     <parent>
@@ -84,6 +87,17 @@
 
             </plugin>
         </plugins>
+
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
     </build>
 
 </project>

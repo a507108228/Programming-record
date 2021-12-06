@@ -1,0 +1,24 @@
+server:
+  port: 8002
+
+spring:
+  datasource:
+    druid:
+      username: lzw
+      password: Pwds1308tgb
+      url: jdbc:mysql://lzw-5071.mysql.rds.aliyuncs.com:3306/revisecode?useSSL=false&serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      stat-view-servlet:
+        allow: true
+
+# 配置mapper xml文件的路径
+# 沃日啊 不加classpath反而对了  草他妈的 浪费了多长时间
+mybatis-plus:
+  mapper-locations:
+    classpath: com/lzw/mapper/xml/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 打印日志

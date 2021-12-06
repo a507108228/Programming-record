@@ -1,2 +1,12 @@
+com\lzw\controller\RequestController.class
+com\lzw\controller\BasicAnoController.class
+com\lzw\mapper\TagMapper.class
+META-INF\spring-configuration-metadata.json
+com\lzw\service\TagService.class
+com\lzw\bean\Person.class
+com\lzw\bean\Tag.class
+com\lzw\controller\RestFulController.class
+com\lzw\service\TagServiceImpl.class
 com\lzw\Demo01Application.class
+com\lzw\bean\Pet.class
 com\lzw\controller\HelloController.class
