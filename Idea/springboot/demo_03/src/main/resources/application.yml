@@ -16,7 +16,6 @@ spring:
         allow: true
 
 # 配置mapper xml文件的路径
-# 沃日啊 不加classpath反而对了  草他妈的 浪费了多长时间
 mybatis-plus:
   mapper-locations:
     classpath*: com/lzw/mapper/xml/*.xml

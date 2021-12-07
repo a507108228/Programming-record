@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lzw.entity.TblBook;
-import com.lzw.entity.vo.TBookQuery;
+
 import com.lzw.mapper.TblBookMapper;
 import com.lzw.service.TblBookService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

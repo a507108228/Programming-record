@@ -4,15 +4,15 @@ package com.lzw.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lzw.entity.TblBook;
-import com.lzw.entity.vo.TBookQuery;
+
 import com.lzw.service.impl.TblBookServiceImpl;
 import com.lzw.utils.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.util.StringUtils;
+
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

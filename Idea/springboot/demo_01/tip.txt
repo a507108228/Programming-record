@@ -11,3 +11,8 @@ rest风格的
     <li>@RequestBody(获取请求体)</li>
     <li>@MatrixVariable(矩阵变量)</li>
 </ul>
+
+
+整合redis
+mp
+Mybatis
