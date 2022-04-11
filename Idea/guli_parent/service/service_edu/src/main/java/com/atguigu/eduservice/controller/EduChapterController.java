@@ -23,52 +23,50 @@ import java.util.List;
 @RestController
 @RequestMapping("/eduservice/chapter")
 @CrossOrigin
-public class EduChapterController {
+public class EduChapterController{
 
     @Autowired
     private EduChapterService chapterService;
 
     // 课程大纲列表,根据课程id进行查询
     @GetMapping("getChapterVideo/{courseId}")
-    public R getChapterVideo(@PathVariable String courseId) {
+    public R getChapterVideo(@PathVariable String courseId){
         List<ChapterVo> list = chapterService.getChapterVideoByCourseId(courseId);
-        return R.ok().data("allChapterVideo",list);
+        return R.ok().data("allChapterVideo", list);
     }
 
     // 添加章节
     @PostMapping("addChapter")
-    public R addChapter(@RequestBody EduChapter eduChapter) {
+    public R addChapter(@RequestBody EduChapter eduChapter){
         chapterService.save(eduChapter);
         return R.ok();
     }
 
     // 删除的方法
     @DeleteMapping("{chapterId}")
-    public R deleteChapter(@PathVariable String chapterId) {
+    public R deleteChapter(@PathVariable String chapterId){
         // 根据chapterId 查询小节表 有数据不删除
         boolean flag = chapterService.deleteChapter(chapterId);
-        if(flag) {
+        if (flag) {
             return R.ok();
         } else {
             return R.error();
         }
-
     }
 
     // 根据章节id查询
     @GetMapping("getChapterInfo/{chapterId}")
-    public R getChapterInfo(@PathVariable String chapterId) {
+    public R getChapterInfo(@PathVariable String chapterId){
         EduChapter eduChapter = chapterService.getById(chapterId);
-        return R.ok().data("chapter",eduChapter);
+        return R.ok().data("chapter", eduChapter);
     }
 
     // 修改章节
     @PostMapping("updateChapter")
-    public R updateChapter(@RequestBody EduChapter eduChapter) {
+    public R updateChapter(@RequestBody EduChapter eduChapter){
         chapterService.updateById(eduChapter);
         return R.ok();
     }
-
 
 
 }

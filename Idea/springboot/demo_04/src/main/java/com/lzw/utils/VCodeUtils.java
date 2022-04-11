@@ -1,4 +1,4 @@
-package com.lzw.util;
+package com.lzw.utils;
 
 import redis.clients.jedis.Jedis;
 

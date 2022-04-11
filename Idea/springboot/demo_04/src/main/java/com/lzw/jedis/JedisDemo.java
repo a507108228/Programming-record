@@ -1,7 +1,7 @@
 package com.lzw.jedis;
 
-import com.lzw.util.JedisUtil;
-import com.lzw.util.UUIDUtils;
+import com.lzw.utils.JedisUtil;
+import com.lzw.utils.UUIDUtils;
 import redis.clients.jedis.Jedis;
 
 

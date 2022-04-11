@@ -10,7 +10,6 @@
         <module>demo_02</module>
         <module>demo_03</module>
         <module>demo_04</module>
-        <module>demo_05</module>
     </modules>
 
     <parent>

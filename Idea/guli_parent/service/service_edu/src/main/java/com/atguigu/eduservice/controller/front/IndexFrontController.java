@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +34,7 @@ public class IndexFrontController{
     @Autowired
     private EduTeacherService teacherService;
 
+    @Cacheable(value = "banner", key = "'select48List'")
     @ApiOperation(value = "前四名师前八课程")
     @GetMapping("index")
     public R index(){

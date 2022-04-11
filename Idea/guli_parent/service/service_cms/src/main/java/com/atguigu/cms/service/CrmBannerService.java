@@ -1,6 +1,8 @@
 package com.atguigu.cms.service;
 
+import com.atguigu.cms.entity.BannerQuery;
 import com.atguigu.cms.entity.CrmBanner;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
@@ -16,4 +18,7 @@ import java.util.List;
 public interface CrmBannerService extends IService<CrmBanner> {
 
     List<CrmBanner> selectIndexList();
+
+    // 分页查询
+    Page getBannerQuery(long current, long limit, BannerQuery bannerQuery);
 }

@@ -21,7 +21,7 @@ public class HelloController{
     @Autowired
     private Person person;
 
-    @GetMapping("/")
+    @GetMapping
     public String test(){
 
         return "你好世界，hello world+123465+*&^%$#@!";

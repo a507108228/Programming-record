@@ -12,7 +12,6 @@
         <module name="demo_03" />
         <module name="demo_04" />
         <module name="demo" />
-        <module name="demo_05" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +21,8 @@
       <module name="demo_03" target="1.8" />
       <module name="demo_04" target="1.8" />
       <module name="demo_05" target="1.8" />
+      <module name="demo_06" target="1.8" />
+      <module name="demo_07" target="1.8" />
       <module name="springboot" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -33,6 +34,8 @@
       <module name="demo_03" options="-parameters" />
       <module name="demo_04" options="-parameters" />
       <module name="demo_05" options="-parameters" />
+      <module name="demo_06" options="-parameters" />
+      <module name="demo_07" options="-parameters" />
       <module name="springboot" options="-parameters" />
     </option>
   </component>

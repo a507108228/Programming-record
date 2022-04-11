@@ -11,5 +11,12 @@
         <property name="serverTimezone" value="UTC" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="guli_edu@lzw-5071.mysql.rds.aliyuncs.com" uuid="812c59be-a493-4a97-916f-bc59545c660b">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://lzw-5071.mysql.rds.aliyuncs.com:3306/guli_edu</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

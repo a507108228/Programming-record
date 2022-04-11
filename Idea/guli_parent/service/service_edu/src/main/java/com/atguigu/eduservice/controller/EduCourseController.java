@@ -36,7 +36,7 @@ public class EduCourseController {
     @ApiOperation(value = "条件分页")
     @PostMapping("pageCourseCondition/{current}/{limit}")
     public R pageCourseCondition(@PathVariable("current") long current,
-                                 @PathVariable("limit")long limit,
+                                 @PathVariable("limit") long limit,
                                  @RequestBody(required = false) CourseQuery courseQuery){
 
         Page query = courseService.getCourseQuery(current, limit, courseQuery);
@@ -48,7 +48,7 @@ public class EduCourseController {
 
     }
 
-    // 课程列表 基本实现
+    // 课程列表
     @GetMapping
     public R getCourseList() {
         List<EduCourse> list = courseService.list(null);

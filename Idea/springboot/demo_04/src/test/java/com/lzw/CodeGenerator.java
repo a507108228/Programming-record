@@ -17,7 +17,7 @@ import org.junit.Test;
  * @since 2021/9/20 17:19
  * @description: 代码生成器
  */
-public class CodeGenerator {
+public class CodeGenerator{
 
     @Test
     public void run() {
@@ -30,7 +30,7 @@ public class CodeGenerator {
         String projectPath = System.getProperty("user.dir");
 
         // 注意这里的绝对路径是可以修改的
-        gc.setOutputDir("D:\\Teaching\\Idea\\springboot\\demo_03" + "/src/main/java");
+        gc.setOutputDir("D:\\Teaching\\Idea\\springboot\\demo_04" + "/src/main/java");
 
         gc.setAuthor("lzw");
         // 生成后是否打开资源管理器

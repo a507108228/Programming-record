@@ -1,4 +1,4 @@
-package com.lzw.util;
+package com.lzw.utils;
 
 import java.util.Random;
 import java.util.UUID;
@@ -21,7 +21,7 @@ public class UUIDUtils{
     }
 
     public static String getUpperUUID(int len){
-        if (len <= 0) return null;
+        if (len <= 0){ return null; }
 
         String uuid = getUpperUUID();
         StringBuffer str = new StringBuffer();
@@ -33,7 +33,7 @@ public class UUIDUtils{
     }
 
     public static String getLowerUUID(int len){
-        if (len <= 0) return null;
+        if (len <= 0) {return null;}
 
         String uuid = getLowerUUID();
         StringBuffer str = new StringBuffer();

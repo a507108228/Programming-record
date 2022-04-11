@@ -98,7 +98,7 @@
 
         // 创建具体的方法 调用teacher.js 定义的方法
         methods: {
-            //讲师列表的方法
+            // 讲师列表的方法
             getList(page = 1) {
                 this.page = page
                 teacher.getTeacherListPage(this.page, this.limit, this.teacherQuery)

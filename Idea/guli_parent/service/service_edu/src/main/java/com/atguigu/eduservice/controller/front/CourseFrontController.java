@@ -14,6 +14,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,6 +37,7 @@ public class CourseFrontController{
     @Autowired
     private EduCourseService courseService;
 
+    @Cacheable(value = "banner", key = "'selectCourseList'")
     @ApiOperation(value = "分页查询课程")
     @PostMapping("getCourseFrontList/{page}/{limit}")
     public R getTeacherFrontList(@PathVariable long page, @PathVariable long limit, @RequestBody(required = false) CourseFrontVo courseFrontVo){

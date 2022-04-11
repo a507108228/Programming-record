@@ -44,20 +44,16 @@ public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> impleme
         // 判断手机号
         if (mobileMember == null) {
             throw new GuliException(20001, "手机号有错误");
-
         }
 
-        // 判断密码
-        // 输入的密码先加密在和数据库比较
+        // 判断密码 输入的密码先加密在和数据库比较
         if (! MD5.encrypt(password).equals(mobileMember.getPassword())) {
             throw new GuliException(20001, "密码有错误");
-
         }
 
         // 用户是否禁用
         if (mobileMember.getIsDisabled()) {
             throw new GuliException(20001, "用户禁用有问题");
-
         }
 
         // 登录成功
@@ -71,12 +67,9 @@ public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> impleme
     public void register(RegisterVo registerVo){
         // 获取注册的数据
         String nickname = registerVo.getNickname();
-
         String mobile = registerVo.getMobile();
         String password = registerVo.getPassword();
-
         String code = registerVo.getCode();
-
 
         // 非空判断
         if (StringUtils.isEmpty(mobile) || StringUtils.isEmpty(password) || StringUtils.isEmpty(code) || StringUtils.isEmpty(nickname)){

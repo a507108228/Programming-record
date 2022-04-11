@@ -73,8 +73,7 @@ public class VodController {
     public R getPlayAuth(@PathVariable String id) {
         try {
             //创建初始化对象
-            DefaultAcsClient client =
-                    InitVodClient.initVodClient(ConstantVodUtils.ACCESS_KEY_ID, ConstantVodUtils.ACCESS_KEY_SECRET);
+            DefaultAcsClient client = InitVodClient.initVodClient(ConstantVodUtils.ACCESS_KEY_ID, ConstantVodUtils.ACCESS_KEY_SECRET);
             //创建获取凭证request和response对象
             GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
             //向request设置视频id

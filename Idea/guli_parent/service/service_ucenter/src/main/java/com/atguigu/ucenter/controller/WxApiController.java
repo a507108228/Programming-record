@@ -15,18 +15,18 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URLEncoder;
 import java.util.HashMap;
 
-@Api(description = "微信相关")
+@Api(tags = "微信相关")
 @CrossOrigin
 @Controller  //只是请求地址，不需要返回数据
 @RequestMapping("/api/ucenter/wx")
-public class WxApiController {
+public class WxApiController{
 
     @Autowired
     private MemberService memberService;
 
     //2 获取扫描人信息，添加数据
     @GetMapping("callback")
-    public String callback(String code, String state) {
+    public String callback(String code, String state){
         try {
             //1 获取code值，临时票据，类似于验证码
             //2 拿着code请求 微信固定的地址，得到两个值 accsess_token 和 openid
@@ -51,13 +51,13 @@ public class WxApiController {
             //使用json转换工具 Gson
             Gson gson = new Gson();
             HashMap mapAccessToken = gson.fromJson(accessTokenInfo, HashMap.class);
-            String access_token = (String)mapAccessToken.get("access_token");
-            String openid = (String)mapAccessToken.get("openid");
+            String access_token = (String) mapAccessToken.get("access_token");
+            String openid = (String) mapAccessToken.get("openid");
 
             //把扫描人信息添加数据库里面
             //判断数据表里面是否存在相同微信信息，根据openid判断
             Member member = memberService.getOpenIdMember(openid);
-            if(member == null) {//memeber是空，表没有相同微信数据，进行添加
+            if (member == null) {//memeber是空，表没有相同微信数据，进行添加
 
                 //3 拿着得到accsess_token 和 openid，再去请求微信提供固定的地址，获取到扫描人信息
                 //访问微信的资源服务器，获取用户信息
@@ -74,8 +74,8 @@ public class WxApiController {
                 String userInfo = HttpClientUtils.get(userInfoUrl);
                 //获取返回userinfo字符串扫描人信息
                 HashMap userInfoMap = gson.fromJson(userInfo, HashMap.class);
-                String nickname = (String)userInfoMap.get("nickname");//昵称
-                String headimgurl = (String)userInfoMap.get("headimgurl");//头像
+                String nickname = (String) userInfoMap.get("nickname");//昵称
+                String headimgurl = (String) userInfoMap.get("headimgurl");//头像
 
                 member = new Member();
                 member.setOpenid(openid);
@@ -87,18 +87,18 @@ public class WxApiController {
             //使用jwt根据member对象生成token字符串
             String jwtToken = JwtUtils.getJwtToken(member.getId(), member.getNickname());
             //最后：返回首页面，通过路径传递token字符串
-            return "redirect:http://localhost:3000?token="+jwtToken;
-        }catch(Exception e) {
-            throw new GuliException(20001,"登录失败");
+            return "redirect:http://localhost:3000?token=" + jwtToken;
+        } catch (Exception e) {
+            throw new GuliException(20001, "登录失败");
         }
     }
 
     //1 生成微信扫描二维码
     @GetMapping("login")
-    public String getWxCode() {
+    public String getWxCode(){
         //固定地址，后面拼接参数
-//        String url = "https://open.weixin.qq.com/" +
-//                "connect/qrconnect?appid="+ ConstantWxUtils.WX_OPEN_APP_ID+"&response_type=code";
+        //        String url = "https://open.weixin.qq.com/" +
+        //                "connect/qrconnect?appid="+ ConstantWxUtils.WX_OPEN_APP_ID+"&response_type=code";
 
         // 微信开放平台授权baseUrl  %s相当于?代表占位符
         String baseUrl = "https://open.weixin.qq.com/connect/qrconnect" +
@@ -113,18 +113,18 @@ public class WxApiController {
         String redirectUrl = ConstantWxUtils.WX_OPEN_REDIRECT_URL;
         try {
             redirectUrl = URLEncoder.encode(redirectUrl, "utf-8");
-        }catch(Exception e) {
+        } catch (Exception e) {
         }
 
         //设置%s里面值
         String url = String.format(
-                    baseUrl,
-                    ConstantWxUtils.WX_OPEN_APP_ID,
-                    redirectUrl,
-                    "atguigu"
-                 );
+                baseUrl,
+                ConstantWxUtils.WX_OPEN_APP_ID,
+                redirectUrl,
+                "atguigu"
+        );
 
         //重定向到请求微信地址里面
-        return "redirect:"+url;
+        return "redirect:" + url;
     }
 }

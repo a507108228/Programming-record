@@ -1,6 +1,7 @@
 package com.atguigu.cms.controller;
 
 
+import com.atguigu.cms.entity.BannerQuery;
 import com.atguigu.cms.entity.CrmBanner;
 import com.atguigu.cms.service.CrmBannerService;
 import com.atguigu.commonutils.R;
@@ -29,11 +30,26 @@ public class BannerAdminController{
     @Autowired
     private CrmBannerService bannerService;
 
+    // 带条件的分页查询
+    @ApiOperation("带条件的分页查询")
+    @PostMapping("pageBannerCondition/{current}/{limit}")
+    public R pageBannerCondition(@PathVariable("current") long current,
+                                 @PathVariable("limit")long limit,
+                                 @RequestBody(required = false) BannerQuery bannerQuery){
+
+        Page query = bannerService.getBannerQuery(current, limit, bannerQuery);
+
+
+        long total = query.getTotal();
+        List<CrmBanner> records = query.getRecords();
+        return R.ok().data("totals", total).data("rows", records);
+
+    }
 
     // 分页查询banner
     @ApiOperation("分页查询banner")
     @GetMapping("pageBanner/{current}/{limit}")
-    public R pageBanner(@PathVariable long current, @PathVariable long limit ){
+    public R pageBanner(@PathVariable("current") long current, @PathVariable("limit") long limit ){
 
         Page<CrmBanner> bannerPage = new Page<>(current, limit);
 
@@ -49,7 +65,7 @@ public class BannerAdminController{
     @GetMapping("getBanner/{id}")
     public R getBanner(@PathVariable String id){
         CrmBanner id1 = bannerService.getById(id);
-        return R.ok().data("id1", id1);
+        return R.ok().data("bannerList", id1);
     }
 
     // 添加
@@ -70,7 +86,7 @@ public class BannerAdminController{
 
     // 修改
     @ApiOperation("修改banner")
-    @PutMapping("updateBanner")
+    @PostMapping("updateBanner")
     public R updateBanner(@RequestBody CrmBanner crmBanner){
         bannerService.updateById(crmBanner);
 

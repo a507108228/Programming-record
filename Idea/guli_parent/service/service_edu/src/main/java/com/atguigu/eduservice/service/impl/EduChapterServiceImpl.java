@@ -51,7 +51,6 @@ public class EduChapterServiceImpl extends ServiceImpl<EduChapterMapper, EduChap
         List<ChapterVo> finalList = new ArrayList<>();
 
         //3 遍历查询章节list集合进行封装
-        // 遍历查询章节list集合
         for (int i = 0; i < eduChapterList.size(); i++) {
             // 每个章节
             EduChapter eduChapter = eduChapterList.get(i);

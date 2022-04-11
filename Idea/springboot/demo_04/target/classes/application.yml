@@ -1,0 +1,43 @@
+server:
+  port: 8004
+
+spring:
+  datasource:
+    druid:
+      username: lzw
+      password: Pwds1308tgb
+      url: jdbc:mysql://lzw-5071.mysql.rds.aliyuncs.com:3306/revisecode?useSSL=false&serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      stat-view-servlet:
+        allow: true
+  redis:
+    host: 121.41.40.20
+    port: 6380
+    password: Pwds.1308tgb
+    # 数据库索引
+    database: 0
+    # 连接超时时间
+    timeout: 1800000
+    lettuce:
+      pool:
+        # 最大连接数
+        max-active: 20
+        # 最大堵塞时间
+        max-wait: -1
+        # 最大空闲连接
+        max-idle: 5
+        # 最小空闲连接
+        min-idle: 0
+
+
+# 配置mapper xml文件的路径
+mybatis-plus:
+  mapper-locations:
+    classpath: com/lzw/mapper/xml/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 打印日志
+

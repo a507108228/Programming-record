@@ -54,9 +54,10 @@ spring:
 # 命令行模式下
 # java -jar xx.jar --spring.profiles.active = dev
 ---
+# 配置文件指定那一种环境
 spring:
   profiles:
-    active: test
+    active: dev
 
 ---
 # 开发环境

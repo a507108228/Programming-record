@@ -37,6 +37,11 @@ public class TotalSort{
             System.out.println(" ");
         }
 
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        System.out.println("AppClassLoader"+loader);
+        System.out.println(loader.getParent()+"ExtClassLoader");
+        System.out.println(loader.getParent().getParent());
+
         System.out.println("");
         long end = System.currentTimeMillis();
         System.out.println("排序用时：" + (end - start));
@@ -349,4 +354,5 @@ public class TotalSort{
         long end = System.currentTimeMillis();
         System.out.println("排序用时：" + (end - start));
     }
+
 }

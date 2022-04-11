@@ -1,5 +1,7 @@
 package com.lzw.controller;
 
+import com.lzw.utils.R;
+import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
@@ -26,13 +28,15 @@ public class RedisTestController{
     private RedisTemplate redisTemplate;
 
     @GetMapping
-    public String getRedis(){
+    public R getRedis(){
         // 设置值
         redisTemplate.opsForValue().set("name", "lzw");
+        redisTemplate.opsForValue().set("age", 100);
         // 取出值
         String name = (String) redisTemplate.opsForValue().get("name");
+        Integer age = (Integer) redisTemplate.opsForValue().get("age");
 
-        return name;
+        return R.ok().data("name", name).data("age", age);
     }
 
 }
